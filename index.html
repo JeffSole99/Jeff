@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Jeffery Sole</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.5.min.css"/>
+<link rel="stylesheet" href="style.css">
+<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all"> -->
+</head>
+
+<div id="main" class="hvr-grow">
+<body style="background-color: white;">
+    <img src="img/jsole3.jpg" alt="Headshot" width=500px class="me">
+    <h1>Jeffery Sole</h1>
+    <h2>
+        Front End Web Developer<br>Mechanical Eng Technologist
+    </h2>
+  </body>
+  <div id="buttons">
+  <button type="submit" class="hvr-grow">Resume</button>
+  <a href="#form">
+  <button class="hvr-grow">Contact Me</button>
+</a>
+  </div>
+</div>
+
+
+<div id="about-me"  class="hvr-grow">
+
+  <div id="text">
+    <h2 class="about-me">About Me</h2>
+    <p id="text-1">
+      I am a very modivated indivudual who has experiance with web development includeing HTML, node.js, DOM and CSS, I have my degree in Mechanical Engineering Technology from Georgian College and am now pursuing my degree in Computer Programming and Analysis from Seneca College in order to obtain my BSc in Computer Science from the Universtiy of Ontario Institue of Technology.
+    </p>
+  </div>
+  <div id="basic-info">
+    <h2 class="info">Info</h2>
+    <table style="width:45%">
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+      <td><b>Age:</b></td>
+      <td><b>22</b></td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td><b>Email:</b></td>
+      <td><b>jeffrey.sole@outlook.com</b></td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td><b>Languages:</b></td>
+      <td><b>English, French</b></td>
+    </tr>
+    </table>
+  </div>
+
+</div>
+
+<h1>Education</h1>
+
+<div id="education-1" class="hvr-grow">
+  <div id="inner">
+    <p id="gyears"><br>2021-Present<br>Seneca College</p>
+  </div>
+  <p id="course"><br>Computer Programming and Analysis<br>Currently Achieving a 4.0 GPA<br></p>
+</div>
+
+<div id="education-2" class="hvr-grow">
+  <div id="inner">
+    <p id="gyears"><br>2017-2020<br>Georgian College</p>
+  </div>
+  <p id="course"><br>Mechanical Engineering Technology<br>Achieved a 3.8 GPA</p>
+</div>
+
+<div id="form" class="hvr-grow">
+  <form id="form-1" name="form-1" action="https://httpbin.org/post" method="POST">
+    <fieldset class="contact-me">
+      <legend class="contact-me"><b>Contact Me</b></legend>
+      <div id="name">
+        <input id="name" type="text" name="name" placeholder="Name" required=true>
+      </div>
+      <div id="email">
+        <input id="email" type="email" name="email" placeholder="Email Address" required="required">
+      </div>
+      <div id="address">
+        <input id="address" type="text" name="address" placeholder="Address" required="required">
+      </div>
+      <div id="postal">
+        <input id="postal" type="text" name="postal" placeholder="Postal Code" required="required" pattern="[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTVXY] ?\d[ABCEGHJ-NPRSTVXY]\d">
+      </div>
+      <div id="datalist">
+        <input type="text" list="city" placeholder="City" required="required">
+        <datalist id="city">
+          <option value="Toronto"></option>
+          <option value="Vaughan"></option>
+          <option value="North York"></option>
+          <option value="Ottawa"></option>
+          <option value="Calgary"></option>
+          <option value="Vancouver"></option>
+        </datalist>
+      </div>
+      
+      <div id="question">
+        <label for="question">Question</label>
+        <input type="radio" name="qch" id="question" value="Question">
+      </div>
+      <div id="comment">
+        <label for="comment">Comment</label>
+        <input type="radio" name="qch" id="comment" value="comment">
+      </div>
+      <div id="hiring">
+        <label for="hiring">Hiring</label>
+        <input type="radio" name="qch" id="hiring" value="hiring">
+      </div>
+      <div id='commentbox'>
+        <input type="text" name="text" id="comment-box" placeholder="Comments">
+      </div>
+      <div id='questionbox'>
+        <input type="text" name="text" id="question-box" placeholder="Questions">
+      </div>
+      <div id='hiringbox'>
+        <input type="text" name="text" id="hiring-box" placeholder="Hiring">
+        <input type="text" name="text" id="pay-rate" placeholder="$/Hr" pattern="[$]\d+[.]\d\d">
+      </div>
+      <input type="submit">
+    </fieldset>
+  </form>
+</div>
+
+<script>
+  const comment = document.getElementById('comment');
+  const question = document.getElementById('question');
+  const hiring = document.getElementById('hiring');
+        comment.onclick = function () {
+          var commentbox = document.getElementById('comment-box');
+          var questionbox = document.getElementById('question-box');
+          var hiringbox = document.getElementById('hiring-box');
+          var payrate = document.getElementById('pay-rate');
+            commentbox.style.display = "inline";
+            questionbox.style.display = "none";
+            hiringbox.style.display = "none";
+            payrate.style.display = "none";
+            commentbox.required = true;
+            questionbox.required = false;
+            hiringbox.required = false;
+            payrate.required = false;
+        };
+        question.onclick = function () {
+          var commentbox = document.getElementById('comment-box');
+          var questionbox = document.getElementById('question-box');
+          var hiringbox = document.getElementById('hiring-box');
+          var payrate = document.getElementById('pay-rate');
+            commentbox.style.display = "none";
+            questionbox.style.display = "inline";
+            hiringbox.style.display = "none";
+            payrate.style.display = "none";
+            commentbox.required = false;
+            questionbox.required = true;
+            hiringbox.required = false;
+            payrate.required = false;
+        };
+        hiring.onclick = function () {
+          var commentbox = document.getElementById('comment-box');
+          var questionbox = document.getElementById('question-box');
+          var hiringbox = document.getElementById('hiring-box');
+          var payrate = document.getElementById('pay-rate');
+            commentbox.style.display = "none";
+            questionbox.style.display = "none";
+            hiringbox.style.display = "inline";
+            payrate.style.display = "inline";
+            commentbox.required = false;
+            questionbox.required = false;
+            hiringbox.required = true;
+            payrate.required = true;
+        };
+</script>
